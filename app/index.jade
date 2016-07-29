@@ -5,4 +5,29 @@ head
 	link(rel="stylesheet", href="css/style.css")
 	title ШВСМ Франшыза
 body
+	header
+		.wrap
+			.logo
+				a(href="/")
+					img(src="images/logo.png", alt="ШВСМ")
+			.main-title
+				p Работаем по РФ и СНГ
+				span Звонок по РФ бесплатно
+			.callback
+				p 8 (800) 845-67-39
+				a(href="#") Заказать звонок 
+	section.main
+		.wrap
+			.main-form
+				.form-title
+					p Успейте открыть
+					span представительство в вашем городе!
+				.form-container
+					p <sup>*</sup>Торопитесь, 1 город = 1 франшиза
+					.form-wrap
+						form(action="mail.php")
+							input(type="text" placeholder="Имя")
+							input(type="text" placeholder="Телефон")
+							input(type="text" placeholder="Email")
+							input(type="submit" value="Заказать звонок")
 	
