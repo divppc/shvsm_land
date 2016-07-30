@@ -64,7 +64,7 @@ header
 				text-transform uppercase
 				letter-spacing 1px
 				&:hover
-					background #4d97e3
+					background #1b6abb
 section.main
 	background url("../images/main-bg.png") no-repeat center/cover
 	.wrap
@@ -98,14 +98,24 @@ section.main
 						height 40px
 						padding-left 35px
 						outline 0
+						&.err
+							border 1px solid #fb1b1b
+							&::-webkit-input-placeholder
+								color #fb1b1b
 						&:not(:last-child)
 							margin-bottom 1vw
 						&:first-child
 							background url("../images/input-name.png") no-repeat 10px center
+							&.err
+								background url("../images/input-name-err.png") no-repeat 10px center
 						&:nth-child(2)
 							background url("../images/input-phone.png") no-repeat 10px center
+							&.err
+								background url("../images/input-phone-err.png") no-repeat 10px center
 						&:nth-child(3)
 							background url("../images/input-mail.png") no-repeat 10px center
+							&.err
+								background url("../images/input-mail-err.png") no-repeat 10px center
 					input[type="submit"]
 						display block
 						width 90%
@@ -124,4 +134,37 @@ section.main
 						transition 0.2s
 						&:hover
 							background #fb1b1b
-				
+		.head-title
+			float left
+			max-width 55%
+			div
+				text-transform uppercase
+				font-size 42px
+				font-weight 600
+			p
+				margin 0
+				font-size 30px
+				text-transform uppercase
+			ul
+				margin 20px 0 0 0
+				padding 0 0 0 20px
+				display block
+				border-left 7px solid #6398cc
+				li
+					list-style-type none
+					font-size 26px
+section.main-info
+	padding 2.5vw 0
+	background #282828
+	position relative
+	&:before		
+		display block
+		content url("../images/mouse.png")
+		position absolute
+		top -60px
+		left 50%
+		transform translateX(-50%)
+	.wrap
+		text-align center
+		font-size 24px
+		text-transform uppercase
