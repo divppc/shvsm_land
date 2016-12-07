@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-html(lang="кг")
+html(lang="ru")
 head
 	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 	link(rel="stylesheet", href="css/style.css")
 	title ШВСМ Франшыза
 body
@@ -15,22 +16,10 @@ body
 				span Звонок по РФ бесплатно
 			.callback
 				p 8 (800) 845-67-39
-				a(href="#") Заказать звонок 
+				a(href="#" class="cb") Заказать звонок 
 	section.main
 		.wrap
-			.main-form
-				.form-title
-					p Успейте открыть
-					span представительство в вашем городе!
-				.form-container
-					p <sup>*</sup>Торопитесь, 1 город = 1 франшиза
-					.form-wrap
-						form(action="mail.php")
-							input(type="text" placeholder="Имя" class="err")
-							input(type="text" placeholder="Телефон")
-							input(type="text" placeholder="Email")
-							input(type="submit" value="Заказать звонок")
-			.head-title
+			h1.head-title
 				div Получайте прибыль
 				p.
 					от 230 000 рублей за 3 месяца с помощью франшизы от Школы Высшего Спортивного Мастерства по хоккею.
@@ -41,10 +30,272 @@ body
 						✓ Срок окупаемости: 3 месяца
 					li.
 						✓ Защита от рисков.
+			.main-form
+				.form-title
+					p Успейте открыть
+					span представительство в вашем городе!
+				.form-container
+					p <sup>*</sup>Торопитесь, 1 город = 1 франшиза
+					.form-wrap
+						form(action="mail.php" method="post")
+							input(type="text" placeholder="Имя" name="form-name" class="form-name" required)
+							input(type="text" placeholder="Телефон" name="form-phone" class="form-phone" required)
+							input(type="text" placeholder="Email" name="form-mail" class="form-mail" required)
+							input(type="submit" value="Заказать звонок" name="submit" class="send-btn")
 	section.main-info
 		.wrap.
 			Станьте частью Федеральной сети коммерческой школы №1 в России! 18 основных городов + более 50 дополнительных
 	section.map
 		iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1368131.0911993438!2d41.24243307956092!3d55.72400570980826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1469872607917" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
+	section.results
+		.wrap
+			h2 Наши результаты
+			.results-wrap
+				.result-item
+					img(src="images/results1.png", alt="")
+					.result-info
+						.result-title 7 проведенных турниров
+						.result-stat От 192 до 593  чел. общ. числ.
+				.result-item
+					img(src="images/results2.png", alt="")
+					.result-info
+						.result-title Летние сборы 2015 г.  
+							i (9 смен)
+						.result-stat
+							div С учасниками от 19 до 35 чел.
+							div С общим кол. от 26 до 43 чел.
+				.result-item
+					img(src="images/results3.png", alt="")
+					.result-info
+						.result-title Осень 2015 / Зима 2016
+						.result-stat
+							div К-ство учасников 26 до 32 чел.
+							div С общим кол. от46 до 53 чел.
+				.result-item
+					img(src="images/results4.png", alt="")
+					.result-info
+						.result-title Летние сборы 2016 г. 
+							i (10 смен)
+						.result-stat Уже продано &gt; 80% мест
+	section.experience
+		.wrap
+			h3.
+				Как сэкономить 2 631 879 рублей<br> или история нашего негативного опыта.
+			p.
+				Знаете, что нужно для того, чтобы франшиза удачно работала? Нужен опыт, причем не только положительный, но и негативный – именно он и помогает создать  качественный продукт.
+			img(src="images/boy.png", alt="")
+			.list
+				.list-title.
+					Цена нашего негативного опыта составила <b>2 631 879 рублей</b>,<br>
+					в чем же были наши ошибки? Сейчас расскажем:
+				ul
+					li.
+						Мы задолжали отелям просто потому, что не смогли прогнозировать непредвиденные расходы
+					li.
+						Мы вкладывали деньги в неэффективную рабочую силу 
+					li.
+						Мы просто были «зелеными» в хоккее и думали, что в спорте только честные люди
+			.list
+				.list-title.
+					Однако уже за 4 месяца мы смогли:  
+				ul
+					li.
+						Выйти из пике и выполнять свои обязательства перед кредиторами 
+					li.
+						Дать старт новым прибыльным проектам 
+					li.
+						Расплатиться с нашими работниками
+			.list
+				.list-title.
+					А добились мы этого благодаря: 
+				ul
+					li.
+						Пересмотру своего опыта 
+					li.
+						Внедрению комплексных систем управления за счет этого снижения трудозатрат и повышения рентабельности 
+					li.
+						Внедрению новых систем маркетинга и продаж
+	section.black-form
+		.wrap
+			p.
+				ведь как говорят Самый хороший учитель в жизни и в бизнесе – опыт, берет дорого, но объясняет доходчиво.
+			.form-container
+				form(action="mail.php" method="post")
+					input(type="text" placeholder="Имя" name="form-name" class="form-name" required)
+					input(type="text" placeholder="Телефон" name="form-phone" class="form-phone" required)
+					input(type="text" placeholder="Email" name="form-mail" class="form-mail" required)
+					input(type="submit" class="send-btn" name="submit" value="Заказать звонок")
+	section.why
+		.wrap
+			h4 почему именно швсм?
+			.why-items
+				.why-item
+					span Полностью Российская компания
+					p.
+						Вы получаете протестированную бизнес-модель. Открытые школы работают и приносят прибыль от 230 000 рублей в месяц.
+				.why-item
+					span Работающие маркетинговые инструменты
+					p.
+						Мы не копируем опыт иностранных коллег, наши авторские разработки ориентированы конкретно под потребителей России и СНГ, именно поэтому они работают.
+				.why-item
+					span Готовая система продаж
+					p.
+						Мы не отнекиваемся скриптами, пуская вашу деятельность на самотек, с нами вы получаете разработанную систему продаж, с существующим головным офисом, который предоставляет вам заявки – иными словами, вы можете обратиться к нам за помощью в сборе первого турнира
+						– от вас останется только провести его по всем стандартам.
+				.why-item
+					span Развитая сеть
+					p.
+						Сотрудничая с нами, вы становитесь частью сети, в которой зарабатывает каждый партнер. То есть вы можете просто продавать услуги, предлагаемые нашей школой и 
+						получать с каждой до 10% прибыли.
+	section.start
+		.wrap 
+			.start-info
+				span Старт на специальных условиях
+				p.
+					Торопитесь, данное предложение действует только для первых 3 партнеров при полной отработке франшизы.
+			a(href="#") Подробнее
+	section.smi
+		.wrap
+			h5 СМИ о нас
+			.smi-logos
+				.smi-item
+					img(src="images/smi1.png", alt="")
+				.smi-item
+					img(src="images/smi2.png", alt="")
+				.smi-item
+					img(src="images/smi3.png", alt="")
+				.smi-item
+					img(src="images/smi4.png", alt="")
+				.smi-item
+					img(src="images/smi5.png", alt="")
+				.smi-item
+					img(src="images/smi6.png", alt="")
+				.smi-item
+					img(src="images/smi7.png", alt="")
+				.smi-item
+					img(src="images/smi8.png", alt="")
+				.smi-item
+					img(src="images/smi9.png", alt="")
+				.smi-item
+					img(src="images/smi10.png", alt="")
+	section.cooperation
+		.wrap
+			h6 Варианты сотрудничества
+			.cooperation-var
+				.cooperation-item
+					.cooperation-title Партнер
+					.cooperation-subtitle Инвестиции от 350 000 рублей
+					ul
+						li.
+							Старт от 2-х недель, первое мероприятие в течение 2-х месяцев
+						li.
+							Внедрение всех маркетинговых инструментов в течении 2-х недель
+						li.
+							Сбор (по желанию) первого турнира
+					.cooperation-subtitle
+						i Условия:
+					ul
+						li.
+							Головной офис совладелец филиала
+						li.
+							Прибыль делится 50% на 50%
+				.cooperation-item
+					.cooperation-title Франшиза
+					.cooperation-subtitle Покупка франшизы, стоимостью от 550 000 рублей
+					ul
+						li.
+							Полная поддержка от старта до результата
+						li.
+							Старт от 2-х недель, первое мероприятие в течение 2-х месяцев
+						li.
+							Внедрение всех маркетинговых инструментов в течении 2-х недель
+						li.
+							Сбор (по желанию) первого турнира
+					.cooperation-subtitle
+						i Условия:
+					ul
+						li.
+							Роялти 3% от поступлений.
+						li.
+							Маркетинговый сбор
+						li.
+							Прибыль полностью ваша
+						li.
+							Возможность зарабатывать проценты с продажи услуг центрального офиса
+				.cooperation-item
+					.cooperation-title Франчайзи/партнер VIP
+					span.
+						Специальное предложение для тех, кто хочет получить быстрый результат, однако сделать и большие инвестиции
+	section.team
+		.wrap
+			p.
+				ШВСМ по Хоккею – это команда.
+			div.
+				Как наши воспитанники учатся играть в команде, так и наши партнеры и франчайзи 
+				становятся частью единой системы.
+			div.
+				Наша миссия – приобщение детей и молодежи к здоровому образу жизни и занятиям спортом.
+			div.
+				Наша цель – создание самой масштабной единой федеральной сети ШВСМ и закрепление 
+				за Россией статуса Мировой хоккейной державы.
+			i
+				Внесите свой вклад в достижение данной цели, оставляйте заявку:
+	section.black-form
+		.wrap
+			.form-container
+				form(action="mail.php" method="post")
+					input(type="text" placeholder="Имя" name="form-name" class="form-name" required)
+					input(type="text" placeholder="Телефон" name="form-phone" class="form-phone" required)
+					input(type="text" placeholder="Email" name="form-mail" class="form-mail" required)
+					input(type="submit" class="send-btn" name="submit" value="Заказать звонок")
+	footer
+		.wrap
+			.footer-blocks
+				.footer-social
+					.main-phone Бесплатно по РФ
+						p 8 (800) 845-67-39
+					.social-links
+						a(href="#")
+							img(src="images/social-media-1.png", alt="")
+						a(href="#")
+							img(src="images/social-media.png", alt="")
+						a(href="#")
+							img(src="images/social-media-2.png", alt="")
+						a(href="#")
+							img(src="images/odnoklassniki-logo.png", alt="")
+						a(href="")
+							img(src="images/youtube-logotype.png", alt="")
+				.footer-subscribe Подписывайся на новости
+					p Подпишись на новости нашей франшизы
+					.subscribe-form
+						form(action="send-mail.php" method="post")
+							input(type="text" name="form-mail" placeholder="Ваш email" class="form-mail" required)
+							input(type="submit" name="submit" class="send-mail" value="ОК")
+
+				.footer-data Реквизиты:
+					p ШВСМ
+					p Email: svsm@gmail.com
+					p ОКПО 02842687
+					p ОГРН 123456789101211
+					p ИНН 7701247328463878345
+			.footer-nav
+				ul
+					li
+						a(href="#") Сборы
+					li
+						a(href="#") Турниры
+					li
+						a(href="#") Блог
+					li
+						a(href="#") Форум
+					li
+						a(href="#") О нас
+					li
+						a(href="#") Блабла
+	script(src="js/jquery-3.0.0.min.js")
+	script(src="js/main.js")
+
+
+
 
 	

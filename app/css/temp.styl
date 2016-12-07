@@ -1,6 +1,6 @@
 @import 'nib'
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,300,600italic,600&subset=latin,cyrillic");
-
+//@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,300,600italic,600&subset=latin,cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300&subset=latin,cyrillic");
 *
 	box-sizing border-box
 .clearfix
@@ -23,14 +23,76 @@ a
 	color #fff
 img
 	max-width 100%
+h2,
+h3,
+h4,
+h5,
+h6
+	font-size 36px
+	color #595f6f
+	text-transform uppercase
+	margin 0
+	text-align center			
+	font-weight 500
+input:not([type="submit"])
+	// display block
+	// width 100%
+	background #fff
+	border 1px solid #d6d5d3
+	height 40px
+	padding 0 10px 0 35px
+	outline 0
+	&.err
+		border 1px solid #fb1b1b
+		&::-webkit-input-placeholder
+			color #fb1b1b
+	// &:not(:last-child)
+	// 	margin-bottom 1vw
+	&.form-name
+		background url("../images/input-name.png") no-repeat 10px center, #fff
+		&.err
+			background url("../images/input-name-err.png") no-repeat 10px center, #fff
+	&.form-phone
+		background url("../images/input-phone.png") no-repeat 10px center, #fff
+		&.err
+			background url("../images/input-phone-err.png") no-repeat 10px center, #fff
+	&.form-mail
+		background url("../images/input-mail.png") no-repeat 10px center, #fff
+		&.err
+			background url("../images/input-mail-err.png") no-repeat 10px center, #fff
+input[type="submit"]
+	display block
+	// width 90%
+	// margin 0 auto
+	background #ff4a4a
+	color #fff
+	text-transform uppercase
+	letter-spacing 1px
+	font-size 18px
+	font-weight 500
+	border none
+	border-radius 0
+	opacity 1
+	-webkit-appearance none
+	// height 45px
+	// line-height 45px
+	text-align center
+	border none
+	cursor pointer
+	outline none
+	transition 0.2s
+	&:hover
+		background #fb1b1b
 .wrap
-	width 60%
+	width 1140px
 	margin 0 auto
 	clearfix()
+	position relative
 header
 	position fixed
 	top 0
 	left 0
+	z-index 10
 	width 100%
 	background rgba(0 0 0 .15)
 	.wrap
@@ -55,16 +117,17 @@ header
 				margin 0
 				font-size 36px
 			a
-				display block
-				background #3e87d1
-				transition 0.2s
-				border-radius 2px
-				padding 10px 0
-				text-align center
-				text-transform uppercase
-				letter-spacing 1px
-				&:hover
-					background #1b6abb
+				&.cb
+					display block
+					background #3e87d1
+					transition 0.2s
+					border-radius 2px
+					padding 10px 0
+					text-align center
+					text-transform uppercase
+					letter-spacing 1px
+					&:hover
+						background #1b6abb
 section.main
 	background url("../images/main-bg.png") no-repeat center/cover
 	.wrap
@@ -93,47 +156,13 @@ section.main
 					input:not([type="submit"])
 						display block
 						width 100%
-						background #fff
-						border 1px solid #d6d5d3
-						height 40px
-						padding-left 35px
-						outline 0
-						&.err
-							border 1px solid #fb1b1b
-							&::-webkit-input-placeholder
-								color #fb1b1b
 						&:not(:last-child)
 							margin-bottom 1vw
-						&:first-child
-							background url("../images/input-name.png") no-repeat 10px center
-							&.err
-								background url("../images/input-name-err.png") no-repeat 10px center
-						&:nth-child(2)
-							background url("../images/input-phone.png") no-repeat 10px center
-							&.err
-								background url("../images/input-phone-err.png") no-repeat 10px center
-						&:nth-child(3)
-							background url("../images/input-mail.png") no-repeat 10px center
-							&.err
-								background url("../images/input-mail-err.png") no-repeat 10px center
 					input[type="submit"]
-						display block
 						width 90%
 						margin 0 auto
-						background #ff4a4a
-						color #fff
-						text-transform uppercase
-						letter-spacing 1px
-						font-size 18px
-						font-weight 500
 						height 45px
 						line-height 45px
-						text-align center
-						border none
-						cursor pointer
-						transition 0.2s
-						&:hover
-							background #fb1b1b
 		.head-title
 			float left
 			max-width 55%
@@ -171,3 +200,656 @@ section.main-info
 section.map
 	width 100%
 	height 25.5vw
+section.results
+	background #fdfdfd
+	padding 5.4vw 0
+	.wrap
+		.results-wrap
+			clearfix()
+			margin-top 3vw
+			.result-item
+				width 49%
+				float left
+				&:nth-child(2)
+					margin-bottom 2%
+				&:nth-child(2n+1)
+					margin-right 2%
+				img
+					display block
+					width 100%
+				.result-info
+					box-shadow 0 1px 1px rgba(0,0,0,.27)
+					background #e7e7e7
+					padding 3.7%
+					min-height 135px
+					color #595f6f
+					.result-title
+						font-size 32px
+						position relative
+						line-height 30px
+						&:after
+							display block
+							content ''
+							width 75px
+							height 1px
+							margin 5px 0
+							background #686868
+					.result-stat
+						font-size 14px
+						font-weight 300
+section.experience
+	padding 5vw 0 9.5vw 0
+	background #f2f3f3
+	overflow hidden
+	.wrap
+		color #595f6f
+		img
+			display block
+			position absolute 
+			bottom -10%
+			right -20%
+			
+		h3
+			font-size 30px
+			&:after
+				display block
+				content ''
+				width 30%
+				margin 10px auto
+				height 2px
+				background #3e87d1
+			&+p
+				font-size 18px
+				margin 0 0 45px 0
+				text-align center
+		.list
+			margin-bottom 40px
+			max-width 60%
+			.list-title
+				font-size 22px
+				font-weight 500
+				margin-bottom 10px
+				b
+					font-weight 500
+					color #3e87d1
+			ul
+				margin 0
+				padding 0 0 0 15px
+				li
+					list-style-type none
+					padding-left 25px
+					font-size 18px
+					font-weight 300
+					margin-bottom 5px
+					position relative
+					&:before
+						display block
+						content ">"
+						text-align center
+						line-height 18px
+						font-size 12px
+						width 16px
+						height 16px
+						background #6398cc
+						border-radius 50%
+						color #fff
+						position absolute
+						top 5px
+						left 0
+section.black-form
+	background #282828
+	padding 50px 0
+	.wrap
+		p
+			text-transform uppercase
+			font-size 18px
+			color #fff
+			font-weight 300
+			text-align center
+			margin 0 0 40px 0
+		.form-container
+			input
+				display block
+				float left
+				width 24%
+				// min-width 255px
+				&:not(:last-child)
+					margin 10px 1.3% 0 0
+				&:last-child
+					padding 20px 15px
+section.why
+	padding 5vw 0 2vw 0
+	background #f2f3f3
+	.why-items
+		margin-top 3.6vw
+		clearfix()
+		.why-item
+			width 49%
+			float left
+			color #595f6f
+			padding-left 90px
+			position relative
+			&:not(:last-child)
+				margin-bottom 50px
+			&:nth-child(2n+1)
+				margin-right 2%
+			&:hover
+				span
+					color #6398cc
+			span
+				font-weight bold
+				font-size 20px
+				transition 0.2s			
+			p
+				font-size 16px
+				margin 5px 0 0 0
+			&:before
+				display block
+				content ''
+				position absolute
+				width 80px
+				height 80px
+				top 5px
+				left 0
+				border-radius 50%
+				transition 0.2s
+			&:first-child
+				&:before
+					background url("../images/why1.png") no-repeat center, #595f6f
+				&:hover
+					&:before
+						background url("../images/why1.png") no-repeat center, #6398cc
+			&:nth-child(2)
+				&:before
+					background url("../images/why2.png") no-repeat center, #595f6f
+				&:hover
+					&:before
+						background url("../images/why2.png") no-repeat center, #6398cc
+			&:nth-child(3)
+				&:before
+					background url("../images/why3.png") no-repeat center, #595f6f
+				&:hover
+					&:before
+						background url("../images/why3.png") no-repeat center, #6398cc
+			&:nth-child(4)
+				&:before
+					background url("../images/why4.png") no-repeat center, #595f6f
+				&:hover
+					&:before
+						background url("../images/why4.png") no-repeat center, #6398cc
+section.start
+	padding 35px 0
+	background #3e87d1
+	color #fff
+	.start-info
+		float left
+		max-width 50%
+		span
+			font-weight bold
+			font-size 24px
+		p
+			font-weight 300
+			font-size 18px
+			margin 5px 0 0 0
+	a
+		display block
+		float right
+		padding 10px 50px
+		transition 0.2s
+		border 1px solid #fff
+		font-size 30px
+		margin-top 10px
+		&:hover
+			border-radius 0px 10px 0 10px
+section.smi
+	padding 5vw 0 4vw 0
+	background url("../images/smi-bg.png") no-repeat center / cover
+	.smi-logos
+		margin-top 3vw
+		clearfix()
+		.smi-item
+			display block
+			float left
+			width 20%
+			margin-bottom 20px
+			img
+				display block
+				margin 0 auto
+				max-width 100%
+			&:nth-child(7)
+				img
+					margin 30px auto 0
+section.cooperation
+	padding 4vw 0
+	color #595f6f
+	.cooperation-item
+		position relative
+		padding 35px 0
+		padding-left 215px
+		&:hover
+			.cooperation-title
+				color #6398cc
+				
+		&:not(:last-child)
+			border-bottom 2px solid #595f6f
+		&:before
+			display block
+			content ""
+			position absolute
+			top 35px
+			left 0
+			width 160px
+			height 160px
+			border-radius 50%
+			transition 0.2s
+		&:first-child
+			&:before
+				background url("../images/cooperation1.png") no-repeat 55% 45%, #595f6f
+			&:hover
+				&:before
+					background url("../images/cooperation1.png") no-repeat 55% 45%, #6398cc
+		&:nth-child(2)
+			&:before
+				background url("../images/cooperation2.png") no-repeat 55% 45%, #595f6f
+			&:hover
+				&:before
+					background url("../images/cooperation2.png") no-repeat 55% 45%, #6398cc
+		&:nth-child(3)
+			&:before
+				background url("../images/cooperation3.png") no-repeat 55% 65%, #595f6f
+			&:hover
+				&:before
+					background url("../images/cooperation3.png") no-repeat 55% 65%, #6398cc
+		.cooperation-title
+			font-weight bold
+			transition 0.2s
+			font-size 36px
+		.cooperation-subtitle
+			font-weight bold
+			font-size 22px
+			margin-top 5px
+		ul
+			padding 0 0 0 20px
+			margin 0 0 15px 0
+			li
+				list-style-type disc
+				font-size 22px
+		span
+			font-size 22px
+section.team
+	padding 5vw 0
+	color #fff
+	background url("../images/team.png") no-repeat center / cover
+	p
+		font-weight bold
+		margin 0 0 10px 0
+	div
+		font-size 22px
+	i
+		display block
+		font-weight bold
+		margin-top 20px
+footer
+	padding 40px 0
+	background #f2f3f3
+	color #282828
+	.footer-blocks
+		clearfix()
+		.footer-social
+			width 30%
+			padding-right 5%
+			margin-right 10%
+			border-right 1px solid #595f6f
+			float left
+			.main-phone
+				padding-left 55px
+				font-weight bold
+				font-size 18px
+				text-transform uppercase
+				position relative
+				&:before
+					display block
+					content ''
+					width 45px
+					height 45px
+					position absolute
+					top 5px
+					left 0
+					background url("../images/phone.png") no-repeat
+				p
+					margin 0
+					font-size 23px
+					font-weight 400
+				a
+					color #282828
+			.social-links
+				clearfix()
+				margin-top 15px
+				a
+					display block
+					float left
+					&:not(:last-child)
+						margin-right 15px
+		.footer-subscribe
+			width 30%
+			float left
+			color #282828
+			font-weight 600
+			font-size 18px
+			padding-right 5%
+			margin-right 10%
+			border-right 1px solid #595f6f
+			p
+				font-size 14px
+				margin 0
+				font-weight 400
+			.subscribe-form
+				clearfix()
+				margin-top 20px
+				input
+					display block
+					float left
+					&[type="submit"]
+						height 40px
+						font-size 14px
+		.footer-data
+			width 20%
+			float left
+			color #282828
+			font-size 18px
+			font-weight 600
+			p
+				margin 0
+				font-weight 400
+				font-size 14px		
+	.footer-nav
+		clearfix()
+		margin-top 50px
+		ul
+			padding 0
+			margin 0
+			text-align center
+			li
+				list-style-type none
+				display inline-block
+				&:not(:last-child)
+					margin-right 12%
+				a
+					font-size 18px
+					color #595f6f
+					text-decoration underline
+					&:hover
+						text-decoration none
+@media screen and (max-width: 1269px) {
+	.wrap {
+		width 96%
+	}
+	section.results .wrap .results-wrap .result-item .result-info {
+		min-height 145px
+	}
+	section.experience .wrap img {
+		max-width 80%
+	}
+	section.experience .wrap .list {
+		max-width 70%
+	}
+	section.black-form .wrap .form-container input {
+		min-width auto
+	}
+	// section.black-form .wrap .form-container input:not(:last-child) {
+	// 	margin 10px 35px 0 0
+	// }
+	footer .footer-blocks .footer-social {
+		margin-right 5%
+	}
+	footer .footer-blocks .footer-subscribe {
+		padding-right 4%
+		margin-right 5%
+	}
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	section.black-form .wrap .form-container input[type="submit"] {
+		font-size 15px
+	}
+}
+@media screen and (max-width: 1024px) {
+	header .wrap .main-title p {
+		font-size 22px
+	}
+	header .wrap .main-title span {
+		font-size 20px
+	}
+	header .wrap .callback p,
+	header .wrap .callback a:not(.cb) {
+		font-size 32px
+	}
+	section.experience .wrap .list {
+		max-width 77%
+	}
+	footer .footer-blocks .footer-social {
+		padding-right 4%
+	}
+	footer .footer-blocks .footer-subscribe {
+		padding-right 3%
+		width 35%
+		margin-right 4%
+		font-size 16px
+	}
+	footer .footer-blocks .footer-subscribe .subscribe-form input {
+		max-width 200px
+	}
+	footer .footer-blocks .footer-data {
+		width 26%
+	}
+	footer .footer-nav ul li:not(:last-child) {
+		margin-right 10%
+	}
+	footer .footer-blocks .footer-social .social-links {
+		margin-top 30px
+	}
+	section.main .wrap .main-form {
+		max-width 50%
+		margin-top 20px
+	}
+	section.main .wrap .head-title {
+		max-width 50%
+	}
+	section.main .wrap .head-title div {
+		font-size 30px
+	}
+	section.main .wrap .head-title p,
+	section.results .wrap .results-wrap .result-item .result-info .result-title {
+		font-size 24px
+	}
+	section.main .wrap .head-title ul li {
+		font-size 20px
+	}
+	section.start .start-info {
+		max-width 60%
+	}
+	section.smi .smi-logos .smi-item img {
+		max-width 90%
+	}
+	section.cooperation .cooperation-item {
+		padding-left 140px
+	}
+	section.cooperation .cooperation-item:before {
+		width 120px
+		height 120px
+	}
+	section.cooperation .cooperation-item:first-child:before {
+		background: url('../images/cooperation1.png') no-repeat 55% 45% / 60%, #595f6f;
+	}
+	section.cooperation .cooperation-item:first-child:hover:before {
+	    background: url('../images/cooperation1.png') no-repeat 55% 45% / 60%, #6398cc;
+	}
+	section.cooperation .cooperation-item:nth-child(2):before {
+		background: url('../images/cooperation2.png') no-repeat 55% 45% / 60%, #595f6f;
+	}
+	section.cooperation .cooperation-item:nth-child(2):hover:before {
+	    background: url('../images/cooperation2.png') no-repeat 55% 45% / 60%, #6398cc;
+	}
+	section.cooperation .cooperation-item:nth-child(3):before {
+		background: url('../images/cooperation3.png') no-repeat 55% 65% / 60%, #595f6f;
+	}
+	section.cooperation .cooperation-item:nth-child(3):hover:before {
+		background: url('../images/cooperation3.png') no-repeat 55% 65% / 60%, #6398cc;
+	}
+	footer .footer-blocks .footer-social .main-phone {
+		font-size 13px
+	}
+	footer .footer-blocks .footer-social .main-phone p {
+		font-size 16px
+	}
+	footer .footer-blocks .footer-social .social-links a:not(:last-child) {
+		margin-right 7px
+	}
+}
+@media screen and (max-width: 767px) {
+	header .wrap .main-title,
+	section.experience .wrap img {
+		display none
+	}
+	section.main-info:before {
+		content ''
+	}
+	header {
+		position absolute
+	}
+	header .wrap .logo {
+		position absolute
+		left 0
+		top 25px
+		transform none
+		max-width 30%
+	}
+	header .wrap .callback p,
+	header .wrap .callback a:not(.cb) {
+		font-size 20px
+	}
+	header .wrap .callback a.cb {
+		font-size 12px
+		padding 5px
+	}
+	section.main .wrap {
+		padding 20vw 0 3vw 0
+	}
+	section.main .wrap .head-title,
+	section.main .wrap .main-form {
+		max-width 100%
+	}
+	section.main .wrap .head-title div {
+		font-size 24px
+	}
+	section.main .wrap .head-title p,
+	section.main .wrap .head-title ul li,
+	section.main .wrap .main-form .form-container p {
+		font-size 16px
+	}
+	section.main-info .wrap {
+		font-size 14px
+	}
+	section.map {
+		height 60vw
+	}
+	h2, h3, h4, h5, h6,
+	section.experience .wrap h3 {
+		font-size 24px
+	}
+	section.results .wrap .results-wrap .result-item,
+	section.results .wrap .results-wrap .result-item:nth-child(2) {
+		width 100%
+		margin-bottom 20px
+	}
+	section.results .wrap .results-wrap .result-item:nth-child(2n+1) {
+		margin-right 0
+	}
+	section.experience .wrap .list {
+		max-width 100%
+		margin-bottom 20px
+	}
+	section.experience .wrap .list .list-title {
+		font-size 18px
+	}
+	section.black-form .wrap p,
+	section.experience .wrap .list ul li {
+		font-size 14px
+	}
+	section.black-form .wrap .form-container input:not(:last-child),
+	section.black-form .wrap .form-container input:last-child {
+		width 100%
+		max-width 100%
+		float none
+		margin 5px auto
+	}
+	section.black-form {
+		padding 20px 0
+	}
+	section.why {
+		padding 5vw 0
+	}
+	section.why .why-items .why-item {
+		width 100%
+		padding 90px 0 0 0
+		text-align center
+	}
+	section.why .why-items .why-item p {
+		text-align left
+	}
+	section.why .why-items .why-item:before {
+		left 50%
+		transform translateX(-50%)
+	}
+	section.why .why-items .why-item:not(:last-child) {
+		margin-bottom 20px
+	}
+	section.start .start-info,
+	section.start a {
+		max-width 100%
+		width 100%
+		text-align center
+	}
+	section.smi {
+		background #fff
+	}
+	section.smi .smi-logos .smi-item {
+		width 50%
+		min-height 101px
+	}
+	section.smi .smi-logos {
+		margin-top 10vw
+	}
+	section.cooperation .cooperation-item {
+		padding 140px 0 0 0
+	}
+	section.cooperation .cooperation-item:before {
+		top 20px
+		left 50%
+		transform translateX(-50%)
+	}
+	section.cooperation .cooperation-item .cooperation-title {
+		text-align center
+		font-size 30px
+	}
+	section.cooperation .cooperation-item .cooperation-subtitle {
+		font-size 18px
+	}
+	section.cooperation .cooperation-item ul li {
+		font-size 16px
+	}
+	section.team div {
+		font-size 16px
+		line-height 16px
+	}
+	footer .footer-blocks .footer-social,
+	footer .footer-blocks .footer-subscribe,
+	footer .footer-blocks .footer-data {
+		width 100%
+		margin 10px 0
+		padding 0
+	}
+	footer .footer-nav ul li:not(:last-child) {
+		margin-right 4%
+	}
+}	
+			
